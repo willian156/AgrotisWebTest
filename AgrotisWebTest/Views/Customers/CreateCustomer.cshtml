@@ -1,0 +1,103 @@
+﻿@model AgrotisWebTest.Models.Customers
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Customers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostalCode" class="control-label"></label>
+                <input asp-for="PostalCode" class="form-control" id="cep"/>
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" id="logradouro" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Complement" class="control-label"></label>
+                <input asp-for="Complement" class="form-control" id="complemento"/>
+                <span asp-validation-for="Complement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Neighborhood" class="control-label"></label>
+                <input asp-for="Neighborhood" class="form-control" id="bairro"/>
+                <span asp-validation-for="Neighborhood" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" id="localidade"/>
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" id="uf"/>
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IbgeCode" class="control-label"></label>
+                <input asp-for="IbgeCode" class="form-control" id="ibge" />
+                <span asp-validation-for="IbgeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressNumber" class="control-label"></label>
+                <input asp-for="AddressNumber" class="form-control" />
+                <span asp-validation-for="AddressNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    
+    <script>
+        $(document).ready(function () {
+            $('#cep').on('blur', function () {
+                var cep = $(this).val().replace(/\D/g, '');
+
+                if (cep.length === 8) {
+                    $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function (data) {
+                        if (!data.erro) {
+                            $('#logradouro').val(data.logradouro);
+                            $('#bairro').val(data.bairro);
+                            $('#localidade').val(data.localidade);
+                            $('#uf').val(data.uf);
+                            $('#ibge').val(data.ibge);
+                            $('#complemento').val(data.complemento);
+                        } else {
+                            alert('CEP não encontrado!');
+                        }
+                    }).fail(function () {
+                        alert('Erro ao buscar o CEP.');
+                    });
+                }
+            });
+        });
+    </script>
+
+
+}
