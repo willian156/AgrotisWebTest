@@ -10,7 +10,6 @@ namespace AgrotisWebTest.Models
         public float LiquidWeight { get; set; }
         [Display(Name = "Unitary Price")]
         public float UnitaryPrice { get; set; }
-
         public List<Orders> Orders { get; set; }
     }
 }

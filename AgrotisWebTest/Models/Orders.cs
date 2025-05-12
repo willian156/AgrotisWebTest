@@ -10,7 +10,9 @@ namespace AgrotisWebTest.Models
         public int CustomerId { get; set; }
         public Customers Customer { get; set; }
         public List<Products> Products { get; set; }
+        [Display(Name = "Total Price")]
         public double TotalPrice { get; set; }
+        [Display(Name = "Total Weight")]
         public double TotalWeight { get; set; }
 
     }
