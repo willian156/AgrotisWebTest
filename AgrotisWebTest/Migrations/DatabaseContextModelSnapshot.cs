@@ -109,20 +109,30 @@ namespace AgrotisWebTest.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("LiquidWeight")
-                        .HasColumnType("float");
+                    b.Property<float>("LiquidWeight")
+                        .HasColumnType("real");
 
-                    b.Property<int?>("OrdersId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("UnitaryPrice")
-                        .HasColumnType("float");
+                    b.Property<float>("UnitaryPrice")
+                        .HasColumnType("real");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrdersId");
-
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("OrdersProducts", b =>
+                {
+                    b.Property<int>("OrdersId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrdersId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("OrdersProducts");
                 });
 
             modelBuilder.Entity("AgrotisWebTest.Models.Orders", b =>
@@ -136,16 +146,19 @@ namespace AgrotisWebTest.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("AgrotisWebTest.Models.Products", b =>
+            modelBuilder.Entity("OrdersProducts", b =>
                 {
                     b.HasOne("AgrotisWebTest.Models.Orders", null)
-                        .WithMany("Products")
-                        .HasForeignKey("OrdersId");
-                });
+                        .WithMany()
+                        .HasForeignKey("OrdersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-            modelBuilder.Entity("AgrotisWebTest.Models.Orders", b =>
-                {
-                    b.Navigation("Products");
+                    b.HasOne("AgrotisWebTest.Models.Products", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

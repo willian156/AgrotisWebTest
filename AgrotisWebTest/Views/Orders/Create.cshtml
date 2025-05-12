@@ -1,0 +1,65 @@
+﻿@model AgrotisWebTest.Models.Orders
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Orders</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmissionDatetime" class="control-label"></label>
+                <p>@Model.EmissionDatetime</p>
+                <span asp-validation-for="EmissionDatetime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.Customers">
+                    <option value="">-- Selecione um cliente --</option>
+                </select>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < ((List<AgrotisWebTest.Models.Products>)ViewBag.Products).Count; i++)
+                    {
+                        var product = ((List<AgrotisWebTest.Models.Products>)ViewBag.Products)[i];
+                        <tr>
+                            <td>
+                                @product.Description
+                                <input type="hidden" name="Items[@i].ProductId" value="@product.Id" />
+                            </td>
+                            <td>
+                                <input type="number" name="Items[@i].Quantity" class="form-control" value="0" min="0" />
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -54,9 +54,9 @@ namespace AgrotisWebTest.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Description,LiquidWeight,UnitaryWeight")] Products products)
+        public async Task<IActionResult> Create(Products products)
         {
-            if (ModelState.IsValid)
+            if (products != null)
             {
                 _context.Add(products);
                 await _context.SaveChangesAsync();

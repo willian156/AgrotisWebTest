@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgrotisWebTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffce5f8099f54acedd1c30f46c4d0a24a1c64f9c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd546c650d9164214e96225dc4b4e4495eb202b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgrotisWebTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgrotisWebTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

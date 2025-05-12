@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AgrotisWebTest.Data;
 using AgrotisWebTest.Models;
+using AgrotisWebTest.Models.ViewModel;
 
 namespace AgrotisWebTest.Controllers
 {
@@ -22,7 +23,8 @@ namespace AgrotisWebTest.Controllers
         // GET: Orders
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Orders.ToListAsync());
+            var orders = await _context.Orders.Include(o => o.Products).ToListAsync();
+            return View(orders);
         }
 
         // GET: Orders/Details/5
@@ -46,7 +48,17 @@ namespace AgrotisWebTest.Controllers
         // GET: Orders/Create
         public IActionResult Create()
         {
-            return View();
+            ViewBag.Customers = new SelectList(_context.Customers, "Id", "Name");
+            ViewBag.Products = _context.Products.ToList();
+
+            var Orders = new Orders()
+            {
+                TotalPrice = 0,
+                TotalWeight = 0,
+                EmissionDatetime = DateTime.Now
+            };
+
+            return View(Orders);
         }
 
         // POST: Orders/Create
@@ -54,15 +66,47 @@ namespace AgrotisWebTest.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,EmissionDatetime,TotalPrice,TotalWeight")] Orders orders)
+        public IActionResult Create(OrderViewModel order)
         {
-            if (ModelState.IsValid)
+            order.Items = order.Items?.Where(i => i.Quantity > 0).ToList();
+            order.EmissionDatetime = DateTime.Now;
+            order.TotalPrice = 0.0;
+            order.TotalWeight = 0.0;
+
+            var listProducts = new List<Products>();
+            foreach (var item in order.Items)
             {
-                _context.Add(orders);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var product = _context.Products.FirstOrDefault(x => x.Id == item.ProductId);
+                if (product != null)
+                {
+                    listProducts.Add(product);
+                    order.TotalPrice += product.UnitaryPrice * item.Quantity;
+                    order.TotalWeight += product.LiquidWeight * item.Quantity;
+                }
             }
-            return View(orders);
+
+            var customer = _context.Customers.FirstOrDefault(c => c.Id == order.CustomerId);
+
+            var newOrder = new Orders()
+            {
+                EmissionDatetime = order.EmissionDatetime,
+                TotalPrice = order.TotalPrice,
+                TotalWeight = order.TotalWeight,
+                Products = listProducts,
+                CustomerId = order.CustomerId,
+                Customer = customer
+            };
+
+            if (newOrder != null)
+            {
+                _context.Orders.Add(newOrder);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Customers = new SelectList(_context.Customers, "Id", "Name", order.CustomerId);
+            ViewBag.Products = _context.Products.ToList();
+            return View(order);
         }
 
         // GET: Orders/Edit/5

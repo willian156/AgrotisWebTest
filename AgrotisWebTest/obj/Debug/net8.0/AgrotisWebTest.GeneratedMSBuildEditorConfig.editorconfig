@@ -28,24 +28,24 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/CreateCustomer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZUN1c3RvbWVyLmNzaHRtbA==
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/DeleteCustomer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERlbGV0ZUN1c3RvbWVyLmNzaHRtbA==
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/DetailsCustomer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERldGFpbHNDdXN0b21lci5jc2h0bWw=
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/EditCustomer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXRDdXN0b21lci5jc2h0bWw=
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/IndexCustomer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4Q3VzdG9tZXIuY3NodG1s
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Home/Index.cshtml]
@@ -56,44 +56,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/CreateOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZU9yZGVyLmNzaHRtbA==
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/DeleteOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZU9yZGVyLmNzaHRtbA==
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/DetailsOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHNPcmRlci5jc2h0bWw=
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/EditOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXRPcmRlci5jc2h0bWw=
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/IndexOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4T3JkZXIuY3NodG1s
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/CreateProduct.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlUHJvZHVjdC5jc2h0bWw=
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/DeleteProduct.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlUHJvZHVjdC5jc2h0bWw=
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/DetailsProduct.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlsc1Byb2R1Y3QuY3NodG1s
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/EditProduct.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdFByb2R1Y3QuY3NodG1s
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/IndexProduct.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXhQcm9kdWN0LmNzaHRtbA==
+[D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio Repos/CSharp/AgrotisTest/AgrotisWebTest/AgrotisWebTest/Views/Shared/Error.cshtml]
