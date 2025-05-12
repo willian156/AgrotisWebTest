@@ -32,7 +32,7 @@ Certifique-se de que os seguintes softwares estejam instalados na sua máquina:
 git clone https://github.com/seu-usuario/AgrotisWebTest.git
 cd AgrotisWebTest
 ```
-###⚙️ Configuração do ambiente
+### ⚙️ Configuração do ambiente
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 ```bash
@@ -67,22 +67,22 @@ http://localhost:7172
 
 O sistema está dividido em três áreas principais:
 
--Customers
+- Customers
 
---➕ Create new
+   - ➕ Create new
 
---📄 List
+   - 📄 List
 
--Products
+- Products
 
---➕ Create new
+   - ➕ Create new
 
---📄 List
+   - 📄 List
 
--Orders
+- Orders
 
---➕ Create new
+   - ➕ Create new
 
---📄 List
+   - 📄 List
 
 A Home apresenta uma tela centralizada com os botões de acesso para cada funcionalidade.
