@@ -41,12 +41,12 @@ DB_CONN=Server=SEU_SERVIDOR;Database=AgrotisWebTestDb;User Id=SEU_USUARIO;Passwo
 🧪 Nota: o projeto utiliza o pacote NuGet DotNetEnv para ler variáveis do arquivo .env.
 Esse pacote é importado no DatabaseContext.cs para carregar a string de conexão.
 
-###📦 Restaurando os pacotes NuGet
+### 📦 Restaurando os pacotes NuGet
 
 ```bash
 dotnet restore
 ```
-###🗄️ Criando o banco de dados
+### 🗄️ Criando o banco de dados
 Aplique as migrations existentes com:
 
 ```bash
@@ -54,7 +54,7 @@ dotnet ef database update
 ```
 Isso criará o banco de dados e suas tabelas com base no seu modelo atual.
 
-###▶️ Executando o projeto
+### ▶️ Executando o projeto
 Para iniciar o servidor web local:
 ```bash
 dotnet run
@@ -63,7 +63,7 @@ Depois, acesse no navegador:
 ```bash
 http://localhost:7172
 ```
-###🧭 Navegação no sistema
+### 🧭 Navegação no sistema
 
 O sistema está dividido em três áreas principais:
 
