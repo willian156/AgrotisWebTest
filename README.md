@@ -26,12 +26,6 @@ Certifique-se de que os seguintes softwares estejam instalados na sua máquina:
 
 ---
 
-### 🔄 Clonando o repositório
-
-```bash
-git clone https://github.com/seu-usuario/AgrotisWebTest.git
-cd AgrotisWebTest
-```
 ### ⚙️ Configuração do ambiente
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
